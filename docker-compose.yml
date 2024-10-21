@@ -1,0 +1,11 @@
+version: '3.8'  # Обновите версию, чтобы избежать предупреждений
+
+services:
+  nginx:
+    image: nginx:latest
+    ports:
+      - "8001:8001"
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+    restart: always
+
